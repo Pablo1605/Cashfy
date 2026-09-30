@@ -1,0 +1,37 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-color);
+    flex: 1;
+    width: 100%;
+    overflow-y: auto;
+    padding-top: 1.25rem;
+    padding-bottom: 2.5rem;
+    box-sizing: border-box;
+}
+
+.themeButton {
+    border: none;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    position: fixed;
+    top: 5rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+@media (max-width: 700px) {
+    .themeButton {
+        top: 12.5rem;
+    }
+}

@@ -1,0 +1,123 @@
+.principalContainer {
+  width: 100%;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  padding: 0.75rem 1rem;
+}
+
+.secondaryContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  gap: 1rem;
+}
+
+.logo {
+  width: 180px;
+  max-height: 3.5rem;
+  height: auto;
+}
+
+.pageButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: auto;
+}
+
+.buttonStyle {
+  border: none;
+  background-color: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0.4rem 0.55rem;
+  white-space: nowrap;
+}
+
+.buttonStyle:hover {
+  transform: scale(1.05);
+}
+
+
+.activeButton {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.logOutButton {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.55rem 0.9rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.logOutButton:hover {
+  transform: scale(1.03);
+  background-color: var(--border-color);
+}
+
+@media (max-width: 1000px) {
+  .logo {
+    width: 140px;
+  }
+
+  .pageButtons {
+    gap: 0.8rem;
+  }
+
+  .buttonStyle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .principalContainer {
+    padding: 0.75rem 0.75rem;
+  }
+
+  .secondaryContainer {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .logo {
+    width: 130px;
+  }
+
+  .pageButtons {
+    width: 100%;
+    justify-content: center;
+    gap: 0.65rem;
+  }
+
+  .buttonStyle {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .logOutButton {
+    width: auto;
+    padding: 0.5rem 0.85rem;
+    font-size: 0.85rem;
+  }
+}

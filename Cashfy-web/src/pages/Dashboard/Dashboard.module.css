@@ -1,0 +1,67 @@
+.container {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+
+.container h1 {
+    font-size: clamp(1.25rem, 4vw, 2rem);
+    text-align: center;
+}
+
+.container h3 {
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+    text-align: center;
+    padding: 0 0.5rem;
+}
+
+.balanceContainer {
+    width: 100%;
+}
+
+.MonthlyWeeklyExpenses {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.MonthlyWeeklyExpenses {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 1rem;
+        gap: 1.25rem;
+    }
+
+    .balanceContainer {
+        width: 100%;
+    }
+
+    .MonthlyWeeklyExpenses {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .MonthlyWeeklyExpenses>* {
+        width: 100%;
+    }
+}

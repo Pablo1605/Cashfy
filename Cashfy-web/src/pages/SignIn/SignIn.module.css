@@ -1,0 +1,228 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signInSection {
+    background-color: var(--bg-primary);
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.passwordInputGroup {
+    position: relative;
+    width: 100%;
+}
+
+.passwordInputGroup input {
+    padding-right: 3rem;
+}
+
+.passwordToggleButton {
+    position: relative;
+    right: -27.30rem;
+    top: -1.2rem;
+    transform: translateY(-100%);
+    background: transparent;
+    width: 2rem;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.passwordToggleButton:focus {
+    outline: none;
+}
+
+.passwordToggleButton .material-symbols-outlined {
+    font-size: 1.2rem;
+}
+
+.formGroup label {
+    font-size: 1.2rem;
+}
+
+
+.formGroup input {
+    background-color: var(--input-bg);
+    width: 30pc;
+    height: 2.7pc;
+    border-radius: 2pc;
+    border: none;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+    .containerSecundario {
+        width: 40vw;
+        height: auto;
+    }
+
+    input {
+        padding: 0.65rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .containerSecundario {
+        width: 85vw;
+        height: auto;
+        border-radius: 1.5rem;
+    }
+
+    input {
+        width: 100%;
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .buttonIs {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .containerSecundario {
+        width: 90vw;
+        height: auto;
+    }
+
+    input {
+        padding: 0.55rem;
+        font-size: 0.85rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+}
+
+.buttonMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonIs {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10pc;
+    margin-top: 15px;
+    width: 30pc;
+    height: 2.7pc;
+    cursor: pointer;
+}
+
+.buttonIs:hover {
+    background-color: rgb(201, 201, 201);
+}
+
+p {
+    width: 20vw;
+    margin-top: 15px;
+}
+
+
+
+.messageSection {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.messageSection h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.messageSection button {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid var(--bg-primary);
+    border-radius: 10pc;
+    margin-top: 15px;
+    width: 15pc;
+    height: 2.7pc;
+    cursor: pointer;
+}
+
+.messageSection button:hover {
+    background-color: var(--bg-primary);
+    color: var(--bg-secondary);
+    border-color: var(--bg-primary);
+}
+
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .signInSection {
+        width: 100%;
+    }
+
+    .messageSection {
+        width: 100%;
+    }
+
+    .form input {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .buttonIs {
+        width: 23pc;
+        height: 2.7pc;
+    }
+}

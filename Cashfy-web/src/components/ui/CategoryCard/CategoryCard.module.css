@@ -1,0 +1,81 @@
+.card {
+    height: auto;
+    min-height: 4rem;
+    width: 100%;
+    background-color: var(--bg-primary);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.6rem 0.75rem;
+    margin-bottom: 0.7rem;
+    border-radius: 0.7pc;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.card p {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: clamp(0.75rem, 2.5vw, 0.95rem);
+    font-size: 1rem;
+}
+
+.infoContainer {
+    display: flex;
+}
+
+.name {
+    flex: 1 1 8rem;
+}
+
+.cardButtons {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.cardButtons button {
+    width: auto;
+    min-width: 3.25rem;
+    height: 1.85rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--bg-primary);
+    font-size: clamp(0.7rem, 2vw, 0.85rem);
+    cursor: pointer;
+    color: var(--text-primary);
+    border: 1px solid var(--text-primary);
+}
+
+.cardButtons button:hover {
+    background-color: var(--text-secondary);
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .card p {
+        white-space: normal;
+        word-break: break-word;
+        font-size: 0.9rem;
+    }
+
+    .infoContainer {
+        display: flex;
+    }
+
+    .cardButtons {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,83 @@
+.container {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tittleButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    height: 10%;
+    width: 100%;
+}
+
+.tittleButton button {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: bold;
+    height: 3rem;
+    width: 8.2rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.cardsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.paginationContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.pageButton {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.35rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pageButton:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.pageInfo {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    .tittleButton {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 0.75rem;
+    }
+
+    .tittleButton h1 {
+        font-size: clamp(1rem, 4vw, 1.2rem);
+    }
+}

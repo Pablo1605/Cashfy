@@ -1,0 +1,109 @@
+.balance {
+    min-height: 52%;
+    width: 100%;
+    background-color: var(--bg-primary);
+    border-radius: 1pc;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.balanceContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.balanceContainer h2 {
+    margin: 0;
+    font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+    color: var(--text-primary);
+}
+
+.mainBalance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(75, 192, 192, 0.1) 0%, rgba(54, 162, 235, 0.1) 100%);
+    border-radius: 0.75rem;
+    border: 2px solid rgba(75, 192, 192, 0.3);
+    gap: 0.5rem;
+}
+
+.balanceLabel {
+    font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+    color: var(--text-primary);
+    font-weight: 500;
+    text-align: center;
+}
+
+.balanceAmount {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+    font-weight: bold;
+    color: var(--text-primary);
+    word-break: break-word;
+    text-align: center;
+}
+
+.balanceAmount.positive {
+    color: rgb(54, 235, 84);
+}
+
+.balanceAmount.negative {
+    color: rgb(245, 91, 91);
+}
+
+.summaryGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.summaryCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(75, 192, 192, 0.1) 0%, rgba(54, 162, 235, 0.1) 100%);
+    border-radius: 0.75rem;
+    border: 2px solid rgba(75, 192, 192, 0.3);
+    gap: 0.5rem;
+    min-width: 0;
+}
+
+.summaryLabel {
+    font-size: clamp(0.75rem, 2.5vw, 0.85rem);
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.summaryAmount {
+    font-size: clamp(1.1rem, 4vw, 1.5rem);
+    font-weight: bold;
+    color: var(--text-primary);
+    word-break: break-word;
+}
+
+.summaryAmount.income {
+    color: rgb(54, 235, 84);
+}
+
+.summaryAmount.expense {
+    color: rgb(245, 91, 91);
+}
+
+@media (max-width: 480px) {
+    .balance {
+        width: 100%;
+        padding: 1.25rem;
+    }
+
+    .mainBalance {
+        padding: 1.25rem;
+    }
+
+    .summaryGrid {
+        grid-template-columns: 1fr;
+    }
+}
