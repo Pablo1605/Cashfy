@@ -4,11 +4,11 @@ Cashfy es una aplicación web de gestión de finanzas personales diseñada para 
 
 ## Capturas
 
-![Dashboard](https://postimg.cc/VrX16h0M)
+![Dashboard](https://i.postimg.cc/0QBNtR8t/Dashboard.png)
 
-![Transactions](https://postimg.cc/njqZzW9m)
+![Transactions](https://i.postimg.cc/fLrbHnw8/Transactions.png)
 
-![Categores](https://postimg.cc/dkGv1fZh)
+![Categores](https://i.postimg.cc/XJzv2SVk/Categories.png)
 
 
 ## Características
