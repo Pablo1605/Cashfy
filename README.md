@@ -91,16 +91,17 @@ Cashfy/
 #### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/Cashfy.git
+git clone https://github.com/Pablo1605/Cashfy.git
 cd Cashfy
 ```
 
 #### 2. Iniciar Mongo con Docker compose
 
+Con Docker desktop corriendo:
 ```bash
 cd Cashfy-api
 
-# Inicia MongoDB y el backend
+# Inicia MongoDB
 docker-compose up -d
 ```
 
@@ -109,17 +110,17 @@ docker-compose up -d
 En Windows:
 
 ```powershell
-cd Stayly-backend
+cd Cashfy-api
 Y ejecutar:
-export MONGODB_URI="mongodb://admin:password@localhost:27017/cashfydb?authSource=admin"
-export JWT_SECRET="tu_clave_secreta"
-gradlew.bat bootRun
+$env:MONGODB_URI="mongodb://admin:password@localhost:27017/cashfydb?authSource=admin"
+$env:JWT_SECRET="tu_clave_secreta"
+.\gradlew.bat bootRun
 ```
 
 En macOS o Linux:
 
 ```bash
-cd Stayly-backend
+cd Cashfy-api
 Y ejecutar:
 export MONGODB_URI="mongodb://admin:password@localhost:27017/cashfydb?authSource=admin"
 export JWT_SECRET="tu_clave_secreta"
@@ -166,7 +167,6 @@ server.port=8081
 server.servlet.context-path=/api
 
 spring.data.mongodb.uri=${MONGODB_URI}
-spring.data.mongodb.database=cashfy
 
 jwt.secret=${JWT_SECRET}
 jwt.expiration=86400000
