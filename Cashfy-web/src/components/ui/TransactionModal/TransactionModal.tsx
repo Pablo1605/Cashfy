@@ -122,7 +122,7 @@ export const TransactionModal: FC<TransactionModalProps> = ({ isOpen, selectedTr
                 <button className={styles.buttonExitModal} type="button" onClick={onClose} disabled={loading}>
                     X
                 </button>
-                <h1>TransactionModal</h1>
+                <h1>Make a transaction</h1>
                 <form onSubmit={handleSubmit}>
                     {error && <p>{error}</p>}
                     <div className={styles.checkBoxContainer}>
