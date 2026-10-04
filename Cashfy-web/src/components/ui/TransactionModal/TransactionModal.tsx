@@ -57,7 +57,7 @@ export const TransactionModal: FC<TransactionModalProps> = ({ isOpen, selectedTr
             setAmount(selectedTransaction.amount);
             setCategory(resolveCategoryId(selectedTransaction));
             setDate(selectedTransaction.date);
-            setDescription(selectedTransaction.description);
+            setDescription(selectedTransaction.description ?? "");
             setError(null);
         } else {
             setType("EXPENSE");

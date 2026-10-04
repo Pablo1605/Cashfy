@@ -25,37 +25,67 @@ export const WeeklyExpense = () => {
         });
     };
 
-    const getExpensesData = (transactions: Transaction[]) => { 
-        const labels = getLast7DaysLabels();
+    const getExpensesData = (transactions: Transaction[]) => {
+    const labels = getLast7DaysLabels();
 
-        const expensesByDate = transactions
-            .filter(t => t.type === 'EXPENSE')
-            .reduce((acc, t) => { 
-                const localDate = typeof t.date === 'string' ? t.date.replace(/-/g, '\/') : t.date; 
-                const dateStr = new Date(localDate).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit' }); 
-                if (acc[dateStr] !== undefined) { 
-                    acc[dateStr] += Number(t.amount); 
+    const expensesByDate = transactions
+        .filter(t => t.type === 'EXPENSE')
+        .reduce(
+            (acc, t) => {
+                const localDate =
+                    typeof t.date === 'string'
+                        ? t.date.replace(/-/g, '/')
+                        : t.date;
+                const dateStr = new Date(localDate).toLocaleDateString('es-ES', {
+                    day: '2-digit',
+                    month: '2-digit'
+                });
+
+                if (acc[dateStr] !== undefined) {
+                    acc[dateStr] += Number(t.amount);
                 }
+
                 return acc;
-            }, labels.reduce((acc, label) => ({ ...acc, [label]: 0 }), {})); 
-        return labels.map(label => expensesByDate[label] || 0);
-    };
+            },
+            labels.reduce<Record<string, number>>(
+                (acc, label) => ({ ...acc, [label]: 0 }),
+                {}
+            )
+        );
+
+    return labels.map(label => expensesByDate[label] || 0);
+};
 
     const getIncomeData = (transactions: Transaction[]) => {
-        const labels = getLast7DaysLabels();
+    const labels = getLast7DaysLabels();
 
-        const expensesByDate = transactions
-            .filter(t => t.type === 'INCOME')
-            .reduce((acc, t) => {
-                const localDate = typeof t.date === 'string' ? t.date.replace(/-/g, '\/') : t.date;
-                const dateStr = new Date(localDate).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit' });
+    const expensesByDate = transactions
+        .filter(t => t.type === 'INCOME')
+        .reduce(
+            (acc, t) => {
+                const localDate =
+                    typeof t.date === 'string'
+                        ? t.date.replace(/-/g, '/')
+                        : t.date;
+
+                const dateStr = new Date(localDate).toLocaleDateString('es-ES', {
+                    day: '2-digit',
+                    month: '2-digit'
+                });
+
                 if (acc[dateStr] !== undefined) {
                     acc[dateStr] += Number(t.amount);
                 }
                 return acc;
-            }, labels.reduce((acc, label) => ({ ...acc, [label]: 0 }), {}));
-        return labels.map(label => expensesByDate[label] || 0);  
-    }
+            },
+            labels.reduce<Record<string, number>>(
+                (acc, label) => ({ ...acc, [label]: 0 }),
+                {}
+            )
+        );
+
+    return labels.map(label => expensesByDate[label] || 0);
+};
 
     return (
         <div className={styles.table}>
