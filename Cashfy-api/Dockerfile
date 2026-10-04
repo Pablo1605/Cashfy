@@ -7,4 +7,4 @@ COPY . .
 RUN chmod +x gradlew
 RUN ./gradlew build -x test
 
-CMD ["sh", "-c", "java -jar build/libs/*.jar"]
+CMD ["java", "-jar", "build/libs/Cashfy-api-0.0.1-SNAPSHOT.jar"]
