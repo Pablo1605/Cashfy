@@ -2,6 +2,8 @@
 
 Cashfy es una aplicación web de gestión de finanzas personales diseñada para ayudar a controlar y optimizar gastos, ingresos y presupuestos. El proyecto combina un backend robusto desarrollado con Spring Boot y Spring Security, con una interfaz de usuario moderna construida en React y TypeScript.
 
+Pagina en la web: https://cashfy-beta.vercel.app/
+
 ## Capturas
 
 ![Dashboard](https://i.postimg.cc/0QBNtR8t/Dashboard.png)
